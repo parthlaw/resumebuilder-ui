@@ -1,0 +1,94 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "linkedin": "johndoe",
+    "github": "johndoe",
+    "website": "https://johndoe.com"
+  },
+  "sections": [
+    {
+      "id": "section-experience-1",
+      "type": "Experience",
+      "items": [
+        {
+          "id": "exp-1",
+          "title": "Senior Software Engineer",
+          "company": "Tech Corp",
+          "location": "San Francisco, CA",
+          "duration": "Jan 2020 - Present",
+          "description": "<ul><li>Led development of scalable microservices using React and Node.js</li><li>Improved system performance by 40% through optimization</li><li>Mentored junior developers and conducted code reviews</li></ul>"
+        },
+        {
+          "id": "exp-2",
+          "title": "Software Engineer",
+          "company": "StartupXYZ",
+          "location": "Remote",
+          "duration": "Jun 2017 - Dec 2019",
+          "description": "<ul><li>Built responsive web applications using TypeScript and TailwindCSS</li><li>Implemented RESTful APIs and integrated third-party services</li><li>Collaborated with design team to improve user experience</li></ul>"
+        }
+      ]
+    },
+    {
+      "id": "section-projects-1",
+      "type": "Projects",
+      "items": [
+        {
+          "id": "proj-1",
+          "title": "Resume Builder AI",
+          "duration": "2024",
+          "description": "<ul><li>Built a full-stack resume builder with AI-powered job description analysis</li><li>Technologies: Next.js, TypeScript, TailwindCSS, Zustand</li><li>Features: Real-time preview, multiple templates, PDF export</li></ul>"
+        },
+        {
+          "id": "proj-2",
+          "title": "E-commerce Platform",
+          "duration": "2023",
+          "description": "<ul><li>Developed a modern e-commerce platform with payment integration</li><li>Technologies: React, Node.js, MongoDB, Stripe</li><li>Implemented shopping cart, order management, and admin dashboard</li></ul>"
+        }
+      ]
+    },
+    {
+      "id": "section-education-1",
+      "type": "Education",
+      "items": [
+        {
+          "id": "edu-1",
+          "degree": "Bachelor of Science in Computer Science",
+          "institution": "Stanford University",
+          "location": "Stanford, CA",
+          "year": "2013 - 2017",
+          "gpa": "3.8/4.0"
+        }
+      ]
+    },
+    {
+      "id": "section-skills-1",
+      "type": "Skills",
+      "items": [
+        {
+          "id": "skill-1",
+          "group": "Languages",
+          "skills": "JavaScript, TypeScript, Python, Java, Go"
+        },
+        {
+          "id": "skill-2",
+          "group": "Frontend",
+          "skills": "React, Next.js, TailwindCSS, HTML, CSS"
+        },
+        {
+          "id": "skill-3",
+          "group": "Backend",
+          "skills": "Node.js, Express, GraphQL, REST APIs"
+        },
+        {
+          "id": "skill-4",
+          "group": "Tools & Platforms",
+          "skills": "Git, Docker, AWS, MongoDB, PostgreSQL"
+        }
+      ]
+    }
+  ]
+}
+

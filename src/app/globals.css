@@ -1,26 +1,338 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Dark mode configuration */
+  --dark-mode: class;
+  
+  /* Light mode colors (default) */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(210 20% 15%);
+  
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(210 20% 15%);
+  
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(210 20% 15%);
+  
+  /* Modern Teal - Fresh & Professional */
+  --color-primary: hsl(174 62% 42%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  /* Soft Mint - Elegant Secondary */
+  --color-secondary: hsl(168 25% 92%);
+  --color-secondary-foreground: hsl(210 20% 15%);
+  
+  /* Warm Neutral - Refined Muted */
+  --color-muted: hsl(30 15% 95%);
+  --color-muted-foreground: hsl(30 8% 45%);
+  
+  /* Vibrant Coral - Distinctive Accent */
+  --color-accent: hsl(14 88% 58%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  
+  /* Fresh Green - Success */
+  --color-success: hsl(142 71% 45%);
+  --color-success-foreground: hsl(0 0% 100%);
+  
+  --color-border: hsl(30 12% 90%);
+  --color-input: hsl(30 12% 90%);
+  --color-ring: hsl(174 62% 42%);
+  
+  /* Sidebar colors */
+  --color-sidebar: hsl(174 35% 97%);
+  --color-sidebar-foreground: hsl(210 20% 15%);
+  --color-sidebar-primary: hsl(174 62% 42%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(168 25% 93%);
+  --color-sidebar-accent-foreground: hsl(210 20% 15%);
+  --color-sidebar-border: hsl(168 20% 88%);
+  --color-sidebar-ring: hsl(174 62% 42%);
+  
+  /* Border radius */
+  --radius-lg: 1rem;
+  --radius-md: calc(1rem - 2px);
+  --radius-sm: calc(1rem - 4px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Dark mode color overrides - must be outside @theme block */
+@layer theme {
+  .dark {
+    --color-background: hsl(210 25% 8%);
+    --color-foreground: hsl(168 15% 94%);
+    
+    --color-card: hsl(210 20% 12%);
+    --color-card-foreground: hsl(168 15% 94%);
+    
+    --color-popover: hsl(210 20% 12%);
+    --color-popover-foreground: hsl(168 15% 94%);
+    
+    /* Bright Teal - Vibrant in dark mode */
+    --color-primary: hsl(174 65% 52%);
+    --color-primary-foreground: hsl(0 0% 100%);
+    
+    /* Deep Teal Gray - Secondary */
+    --color-secondary: hsl(174 18% 16%);
+    --color-secondary-foreground: hsl(168 15% 94%);
+    
+    /* Rich Dark Gray */
+    --color-muted: hsl(210 15% 14%);
+    --color-muted-foreground: hsl(168 10% 58%);
+    
+    /* Warm Coral - Pops in dark */
+    --color-accent: hsl(14 88% 60%);
+    --color-accent-foreground: hsl(0 0% 100%);
+    
+    --color-destructive: hsl(0 72% 51%);
+    --color-destructive-foreground: hsl(168 15% 94%);
+    
+    /* Emerald - Success */
+    --color-success: hsl(142 71% 50%);
+    --color-success-foreground: hsl(0 0% 100%);
+    
+    --color-border: hsl(210 20% 18%);
+    --color-input: hsl(210 20% 15%);
+    --color-ring: hsl(174 65% 52%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Additional CSS Variables for custom usage */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    /* Modern Teal - Fresh & Professional */
+    --primary: 174 62% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Mint - Elegant Secondary */
+    --secondary: 168 25% 92%;
+    --secondary-foreground: 210 20% 15%;
+
+    /* Warm Neutral - Refined Muted */
+    --muted: 30 15% 95%;
+    --muted-foreground: 30 8% 45%;
+
+    /* Vibrant Coral - Distinctive Accent */
+    --accent: 14 88% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Fresh Green - Success */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 30 12% 90%;
+    --input: 30 12% 90%;
+    --ring: 174 62% 42%;
+
+    --radius: 1rem;
+
+    /* Dynamic Gradient: Teal to Coral */
+    --gradient-hero: linear-gradient(135deg, hsl(174 62% 42%) 0%, hsl(166 58% 48%) 30%, hsl(14 88% 58%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(168 25% 97%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(14 88% 58%) 0%, hsl(24 85% 62%) 100%);
+    
+    --shadow-card: 0 2px 8px -2px rgb(174 62% 42% / 0.08), 0 1px 4px -1px rgb(0 0 0 / 0.06);
+    --shadow-card-hover: 0 12px 24px -4px rgb(174 62% 42% / 0.15), 0 8px 16px -4px rgb(14 88% 58% / 0.08);
+
+    --sidebar-background: 174 35% 97%;
+    --sidebar-foreground: 210 20% 15%;
+    --sidebar-primary: 174 62% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 168 25% 93%;
+    --sidebar-accent-foreground: 210 20% 15%;
+    --sidebar-border: 168 20% 88%;
+    --sidebar-ring: 174 62% 42%;
+  }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 168 15% 94%;
+
+    --card: 210 20% 12%;
+    --card-foreground: 168 15% 94%;
+
+    --popover: 210 20% 12%;
+    --popover-foreground: 168 15% 94%;
+
+    /* Bright Teal - Vibrant in dark mode */
+    --primary: 174 65% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Teal Gray - Secondary */
+    --secondary: 174 18% 16%;
+    --secondary-foreground: 168 15% 94%;
+
+    /* Rich Dark Gray */
+    --muted: 210 15% 14%;
+    --muted-foreground: 168 10% 58%;
+
+    /* Warm Coral - Pops in dark */
+    --accent: 14 88% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 168 15% 94%;
+
+    /* Emerald - Success */
+    --success: 142 71% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 210 20% 18%;
+    --input: 210 20% 15%;
+    --ring: 174 65% 52%;
+
+    /* Stunning Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(174 65% 52%) 0%, hsl(166 60% 55%) 30%, hsl(14 88% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 25% 8%) 0%, hsl(210 20% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(14 88% 60%) 0%, hsl(24 85% 65%) 100%);
+    
+    --shadow-card: 0 2px 8px -2px rgb(0 0 0 / 0.5), 0 1px 4px -1px rgb(0 0 0 / 0.4);
+    --shadow-card-hover: 0 12px 24px -4px rgb(174 65% 52% / 0.2), 0 8px 16px -4px rgb(14 88% 60% / 0.12);
+
+    --sidebar-background: 210 22% 10%;
+    --sidebar-foreground: 168 15% 94%;
+    --sidebar-primary: 174 65% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 18% 16%;
+    --sidebar-accent-foreground: 168 15% 94%;
+    --sidebar-border: 210 20% 18%;
+    --sidebar-ring: 174 65% 52%;
+  }
 }
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Casual background pattern */
+  .bg-casual-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, hsl(var(--accent) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--success) / 0.02) 0%, transparent 50%);
+  }
+
+  /* Gradient utility classes */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Shadow utility classes */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Details/Summary collapsible styling */
+  details > summary {
+    list-style: none;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] > summary > span > span:first-child {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+  }
+
+  details:not([open]) > summary > span > span:first-child {
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* TipTap Editor Styles */
+.ProseMirror {
+  outline: none;
+}
+
+.ProseMirror p {
+  margin: 0.5rem 0;
+}
+
+.ProseMirror p:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+}
+
+.ProseMirror li {
+  margin: 0.25rem 0;
+}
+
+.ProseMirror strong {
+  font-weight: 600;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: hsl(var(--muted-foreground));
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+

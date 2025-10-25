@@ -1,0 +1,105 @@
+{
+  "features": [
+    {
+      "icon": "Sparkles",
+      "title": "AI Tailoring",
+      "description": "Automatically optimize your resume for any job description with intelligent analysis.",
+      "color": "text-accent"
+    },
+    {
+      "icon": "FileText",
+      "title": "LaTeX Precision",
+      "description": "Generate professional, publication-quality resumes with perfect formatting.",
+      "color": "text-primary"
+    },
+    {
+      "icon": "Zap",
+      "title": "Easy Editing",
+      "description": "Drag, drop, and edit with an intuitive interface. No LaTeX knowledge required.",
+      "color": "text-success"
+    }
+  ],
+  "howItWorks": [
+    {
+      "step": "01",
+      "title": "Import Your Resume",
+      "description": "Start with your existing resume data or create a new one from scratch.",
+      "icon": "FileText"
+    },
+    {
+      "step": "02",
+      "title": "Paste Job Description",
+      "description": "Add the job description you're targeting for AI-powered analysis.",
+      "icon": "Target"
+    },
+    {
+      "step": "03",
+      "title": "AI Optimization",
+      "description": "Our AI analyzes and suggests improvements to match the job requirements.",
+      "icon": "Sparkles"
+    },
+    {
+      "step": "04",
+      "title": "Export LaTeX",
+      "description": "Download your perfectly formatted LaTeX resume ready for submission.",
+      "icon": "CheckCircle2"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "Clock",
+      "title": "Save Time",
+      "description": "Create tailored resumes in minutes, not hours."
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Increase Success Rate",
+      "description": "Match job requirements better and get more interviews."
+    },
+    {
+      "icon": "Target",
+      "title": "ATS Optimized",
+      "description": "Ensure your resume passes Applicant Tracking Systems."
+    }
+  ],
+  "useCases": [
+    {
+      "icon": "Briefcase",
+      "title": "Job Seekers",
+      "description": "Tailor your resume for each application effortlessly."
+    },
+    {
+      "icon": "GraduationCap",
+      "title": "Recent Graduates",
+      "description": "Create professional resumes that stand out."
+    },
+    {
+      "icon": "Code",
+      "title": "Tech Professionals",
+      "description": "Showcase your skills with clean, ATS-friendly formatting."
+    },
+    {
+      "icon": "Users",
+      "title": "Career Changers",
+      "description": "Highlight transferable skills for new industries."
+    }
+  ],
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "Resumes Created"
+    },
+    {
+      "value": "95%",
+      "label": "User Satisfaction"
+    },
+    {
+      "value": "3x",
+      "label": "More Interviews"
+    },
+    {
+      "value": "5min",
+      "label": "Average Time"
+    }
+  ]
+}
