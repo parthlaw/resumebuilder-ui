@@ -10,8 +10,8 @@ import PersonalInfoSection from "@/components/builder/PersonalInfoSection";
 import ExperienceEditor from "@/components/builder/ExperienceEditor";
 import ProjectEditor from "@/components/builder/ProjectEditor";
 import EducationEditor from "@/components/builder/EducationEditor";
-import { PreviewConfigBar } from "@/components/builder/PreviewConfigBar";
 import { ArtboardPreview } from "@/components/builder/ArtboardPreview";
+import { PreviewConfigBar } from "@/components/builder/PreviewConfigBar";
 import { useResumeStore } from "@/utils/store";
 import { ResumeItem } from "@/types";
 import { toast } from "@/hooks/use-toast";
@@ -184,7 +184,7 @@ export function BuilderContent() {
 
         <div className="flex-1 overflow-auto">
           <div className="flex flex-row h-full">
-            <div className="container mx-auto p-6">
+            <div className="w-[45%] lg:w-[45%] xl:w-[45%] p-6 overflow-auto">
               <Tabs
                 value={activeFormTab}
                 onValueChange={(v) =>
@@ -225,19 +225,19 @@ export function BuilderContent() {
                 {/* Personal Info Tab */}
                 <TabsContent value="personal" className="mt-0">
                   <div className="grid lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-3">
                       <PersonalInfoSection />
                     </div>
-                    <div>
+                    {/* <div>
                       <JDAnalyzer />
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
 
                 {/* Experience Tab */}
                 <TabsContent value="experience" className="mt-0">
                   <div className="grid lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2 space-y-4">
+                    <div className="lg:col-span-3 space-y-4">
                       {sections
                         .filter((s) => s.type === "Experience")
                         .map((section) => (
@@ -267,16 +267,16 @@ export function BuilderContent() {
                         Add Experience
                       </Button>
                     </div>
-                    <div>
+                    {/* <div>
                       <JDAnalyzer />
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
 
                 {/* Projects Tab */}
                 <TabsContent value="projects" className="mt-0">
                   <div className="grid lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2 space-y-4">
+                    <div className="lg:col-span-3 space-y-4">
                       {sections
                         .filter((s) => s.type === "Projects")
                         .map((section) => (
@@ -306,16 +306,16 @@ export function BuilderContent() {
                         Add Project
                       </Button>
                     </div>
-                    <div>
+                    {/* <div>
                       <JDAnalyzer />
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
 
                 {/* Education Tab */}
                 <TabsContent value="education" className="mt-0">
                   <div className="grid lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2 space-y-4">
+                    <div className="lg:col-span-3 space-y-4">
                       {sections
                         .filter((s) => s.type === "Education")
                         .map((section) => (
@@ -345,16 +345,16 @@ export function BuilderContent() {
                         Add Education
                       </Button>
                     </div>
-                    <div>
+                    {/* <div>
                       <JDAnalyzer />
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
 
                 {/* Skills Tab */}
                 <TabsContent value="skills" className="mt-0">
                   <div className="grid lg:grid-cols-3 gap-6">
-                    <div className="lg:col-span-2 space-y-4">
+                    <div className="lg:col-span-3 space-y-4">
                       {sections
                         .filter((s) => s.type === "Skills")
                         .map((section) => (
@@ -375,9 +375,9 @@ export function BuilderContent() {
                         </div>
                       )}
                     </div>
-                    <div>
+                    {/* <div>
                       <JDAnalyzer />
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
               </Tabs>
@@ -441,7 +441,7 @@ export function BuilderContent() {
                 />
               )}
             </div>
-            <div className="flex flex-col h-full">
+            <div className="flex-1 flex flex-col h-full border-l border-border min-w-0">
               <PreviewConfigBar />
               <div className="flex-1 overflow-hidden">
                 <ArtboardPreview
@@ -450,7 +450,7 @@ export function BuilderContent() {
                     sections,
                   }}
                   mode="builder"
-                  className="w-full h-full rounded-lg shadow-lg"
+                  className="w-full h-full"
                 />
               </div>
             </div>

@@ -53,7 +53,8 @@ export function generateBaseStyles(
       font-size: 11pt;
       line-height: ${spacingConfig.lineHeight};
       padding: ${spacingConfig.pageMargin}in;
-      overflow: hidden;
+      height: 100%;
+      overflow: auto;
       position: relative;
     }
 

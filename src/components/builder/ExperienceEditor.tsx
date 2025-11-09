@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import RichTextEditor from "@/components/ui/RichTextEditor";
 import { ResumeItem } from "@/utils/store";
+import DurationSelector from "./DurationSelector";
 
 interface ExperienceEditorProps {
   isOpen: boolean;
@@ -84,8 +85,8 @@ const ExperienceEditor = ({ isOpen, onClose, onSave, initialData }: ExperienceEd
             <div className="space-y-2">
               <Label htmlFor="duration">Duration *</Label>
               <Input
-                id="duration"
-                placeholder="Jan 2020 - Present"
+                id="location"
+                placeholder="Jan 2023 - Mar 2025"
                 value={formData.duration}
                 onChange={(e) => handleChange("duration", e.target.value)}
               />

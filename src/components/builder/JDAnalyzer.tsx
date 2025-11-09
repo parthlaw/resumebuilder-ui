@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/Textarea";
 import { Sparkles, Loader2 } from "lucide-react";
@@ -41,11 +40,7 @@ const JDAnalyzer = () => {
   };
 
   return (
-    <Card className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <Sparkles className="w-5 h-5 text-accent" />
-        <h3 className="text-lg font-semibold">Job Description Analyzer</h3>
-      </div>
+    <div className="space-y-4">
       <Textarea
         placeholder="Paste the job description here..."
         value={jdText}
@@ -86,7 +81,7 @@ const JDAnalyzer = () => {
           </div>
         </div>
       )}
-    </Card>
+    </div>
   );
 };
 
